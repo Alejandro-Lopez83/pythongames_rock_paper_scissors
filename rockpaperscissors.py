@@ -8,12 +8,21 @@ user_play=''
 game_iteration= 0
 
 def menu():
-    print(f"\n\n*************************ROCK-PAPER-SCISSORS************************* \n")
+    print(f"\n\n*********************************************************************")
+    print(f"**                            WELCOME TO                           ** ")
+    print(f"**********************   ROCK-PAPER-SCISSORS   ********************** ")
+    print(f"**                                                                 ** ")
+    print(f"*********************************************************************\n\n")
 
     
 def menu_ingame():
-    print(f'                              Pick an option:\n')
-    print(f'                      Rock✊   Paper✋   Scissors⚔\n')
+    print(f"\n\n*********************************************************************")
+    print(f"**                                                                 ** ")
+    print(f'**                         Type in your option:                    ** ')
+    print("**                                                                 **")
+    print(f'**                     Rock✊   Paper✋   Scissors⚔                ** ')
+    print(f"**                                                                 ** ")
+    print(f"*********************************************************************\n\n")
 
 
 
@@ -25,83 +34,104 @@ while game_iteration <3 and user_count < 2 and computer_count < 2:
     user_selection= input('Choose an option?: ').lower().strip()
     
     if user_selection not in list_game:
-        print(f"\n Choose one of the valid options \n")
+        print(f"\nChoose one of the valid options \n")
         continue
 
     else:   
         game_iteration += 1
         print(f"\n Try {game_iteration}/3")
-        print(f"\n-----------> You: {user_selection.upper()}  VS  {computer_selection_random.upper()} :Computer <----------- \n")
+        print(f"\n\n---------------------------------------------------------------------")
+        print(f"                    You: {user_selection.upper()}  VS  {computer_selection_random.upper()} :Computer              ")
+        print(f"---------------------------------------------------------------------\n\n")
 
     # Bloque ROCK
 
         if user_selection == 'rock' and computer_selection_random == 'rock':
-            print('It is a draw!!!! \n') 
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count}')
-            print(f"                       COMPUTER: {computer_count} ")
+            print(f"\n\n---------------------------------------------------------------------")
+            print('--                          It is a draw!!!!                       --') 
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
             continue
 
         if user_selection == 'rock' and computer_selection_random == 'paper':
             computer_count += 1
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count}')
-            print(f"                       COMPUTER: {computer_count} ")
+            print(f"\n\n---------------------------------------------------------------------")
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
 
         if user_selection == 'rock' and computer_selection_random == 'scissors':
             user_count += 1
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count}')
-            print(f"                       COMPUTER: {computer_count} ")
-
+            print(f"\n\n---------------------------------------------------------------------")
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
     # Bloque PAPER  
         
         if user_selection == 'paper' and computer_selection_random == 'paper':
-            print('It is a draw!!!! \n') 
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count} ')
-            print(f"                       COMPUTER: {computer_count} ")
+            print(f"\n\n---------------------------------------------------------------------")
+            print('--                          It is a draw!!!!                       --') 
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
             continue
 
         if user_selection == 'paper' and computer_selection_random == 'rock':
             user_count += 1
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count}')
-            print(f"                       COMPUTER: {computer_count} ")
+            print(f"\n\n---------------------------------------------------------------------")
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
 
         if user_selection == 'paper' and computer_selection_random == 'scissors':
             computer_count += 1
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count}')
-            print(f"                       COMPUTER: {computer_count} ")
+            print(f"\n\n---------------------------------------------------------------------")
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
         
     # Bloque SCISSORS
 
         if user_selection == 'scissors' and computer_selection_random == 'scissors':
-            print('It is a draw!!!! \n') 
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count} ')
-            print(f"                       COMPUTER: {computer_count} ")
+            print(f"\n\n---------------------------------------------------------------------")
+            print('--                          It is a draw!!!!                       --') 
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
             continue
 
         if user_selection == 'scissors' and computer_selection_random == 'rock':
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count}')
-            print(f"                       COMPUTER: {computer_count} ")
+            computer_count += 1
+            print(f"\n\n---------------------------------------------------------------------")
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
 
         if user_selection == 'scissors' and computer_selection_random == 'paper':
             user_count += 1
-            print(f"                        SCORE \n")
-            print(f'                       YOU: {user_count}')
-            print(f"                       COMPUTER: {computer_count} ")
+            print(f"\n\n---------------------------------------------------------------------")
+            print(f"--                             SCORE                               --")
+            print(f'--                            YOU: {user_count}                               --')                        
+            print(f"--                       COMPUTER: {computer_count}                               --")
+            print(f"---------------------------------------------------------------------\n\n")
     
 
 if user_count == 2 or user_count > computer_count:
-    print(f'\n\n                        You WIN!!!!')
+    print(f'\n                        You WIN!!!!\n\n')
 
 elif computer_count == 2 or user_count < computer_count:
-    print(f'\n\n                        Computer WINS!!!!')
+    print(f'\n                        Computer WINS!!!!\n\n')
 else:
-    print(f'\n\n                        It is a draw')
+    print(f'\n                        It is a draw\n\n')
     
     
+ 
